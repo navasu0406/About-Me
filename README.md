@@ -6,6 +6,40 @@
 - 💬 Ask me about **Passionate and detail-oriented Backend Developer with strong expertise in Java, Spring Boot, and SQL. Skilled in building scalable, secure, and high-performance server-side applications and RESTful APIs. Experienced in designing efficient database schemas, optimizing queries, and implementing best practices for clean, maintainable code. Adept at problem-solving, debugging, and collaborating in agile development environments to deliver robust backend solutions.**
 
 - 📫 How to reach me **hemanthvasu41468@gmail.com**
+- name: Generate snake animation
+
+on:
+  schedule: # execute every 12 hours
+    - cron: "* */12 * * *"
+
+  workflow_dispatch:
+
+  push:
+    branches:
+    - main
+
+jobs:
+  generate:
+    permissions:
+      contents: write
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+
+    steps:
+      - name: generate snake.svg
+        uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: dist/snake.svg?palette=github-dark
+
+
+      - name: push snake.svg to the output branch
+        uses: crazy-max/ghaction-github-pages@v3.1.0
+        with:
+          target_branch: output
+          build_dir: dist
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">

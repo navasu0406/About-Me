@@ -1,7 +1,7 @@
 <h1 align="center">Hi 👋, I'm Hemanth Vasu</h1>
 <h3 align="center">A passionate Bankend developer</h3>
 
-- 🌱 I’m currently building projects.**
+- 🌱 I’m currently building projects.
 
 - 💬 Ask me about **Passionate and detail-oriented Backend Developer with strong expertise in Java, Spring Boot, and SQL. Skilled in building scalable, secure, and high-performance server-side applications and RESTful APIs. Experienced in designing efficient database schemas, optimizing queries, and implementing best practices for clean, maintainable code. Adept at problem-solving, debugging, and collaborating in agile development environments to deliver robust backend solutions.**
 
